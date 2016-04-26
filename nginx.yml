@@ -1,6 +1,8 @@
 ---
--name: Deploy nginx
+- name: Deploy nginx
+
 tasks:
+
   - name: install nginx
     yum: name=nginx update-cache=yes
     
@@ -9,5 +11,6 @@ tasks:
       dest=/etc/nginx/sites-enambled/default
       src:/etc/nginx/sites-available/default
       state=link
+  
   - name: restart nginx
     service: name=nginx state=restarted
