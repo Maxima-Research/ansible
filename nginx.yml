@@ -1,7 +1,7 @@
 ---
 - name: Deploy nginx
 
-tasks:
+  tasks:
 
   - name: install nginx
     yum: name=nginx update-cache=yes
