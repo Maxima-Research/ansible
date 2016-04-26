@@ -1,3 +1,4 @@
+---
 -name: Deploy nginx
 tasks:
   - name: install nginx
