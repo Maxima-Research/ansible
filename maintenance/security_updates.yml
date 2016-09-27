@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+    - include: tasks/security_updates_debian.yml
+      when: ansible_os_family == "Debian"
+
+    - name: Update RedHat systems.
+      when: ansible_os_family == "RedHat"
+      yum: name=* state=latest
+
